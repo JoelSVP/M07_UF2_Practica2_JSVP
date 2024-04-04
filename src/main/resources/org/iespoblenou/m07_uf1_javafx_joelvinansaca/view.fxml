@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Polygon?>
+
+<?import javafx.scene.image.ImageView?>
+<VBox fx:id="vBox" alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.iespoblenou.m07_uf1_javafx_joelvinansaca.DibujarFigura">
+
+    <ImageView fx:id="imageView"/>
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0"/>
+    </padding>
+
+    <Text fx:id="textFigura"  text="Selecciona una figura: "/>
+    <fx:define>
+        <ToggleGroup fx:id="group"/>
+    </fx:define>
+
+    <RadioButton fx:id="rButtonRectangle" text="Rectangulo" toggleGroup="$group"/>
+    <RadioButton fx:id="rButtonTriangle" text="Triangulo" toggleGroup="$group"/>
+    <RadioButton fx:id="rButtonCircle" text="Circulo" toggleGroup="$group"/>
+    <RadioButton fx:id="rButtonEllipse" text="Elipse" toggleGroup="$group"/>
+
+    <Text fx:id="textColor" text="Introduce un color para rellenarla: "/>
+
+    <VBox fx:id="vBoxLayout">
+        <TextField fx:id="textFieldColor"/>
+    </VBox>
+
+    <StackPane fx:id="paneColor">
+        <Label fx:id="labelColorFigura"/>
+    </StackPane>
+
+    <StackPane fx:id="pane">
+        <Rectangle fx:id="rectangle"/>
+        <Circle fx:id="circle"/>
+        <Ellipse fx:id="ellipse"/>
+        <Polygon fx:id="triangle"/>
+    </StackPane>
+
+    <Button text="Aceptar" onAction="#cambiarColor"/>
+
+
+</VBox>

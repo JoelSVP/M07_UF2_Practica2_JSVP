@@ -1,0 +1,9 @@
+#vBox {
+    -fx-background-image: url("images_m7/bg.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 720 520;
+    -fx-background-position: center center;
+
+    -fx-image: url("images_m7/m7-logo.png");
+
+}
